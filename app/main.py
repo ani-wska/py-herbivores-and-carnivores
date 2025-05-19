@@ -9,7 +9,7 @@ class Animal:
         if self.health > 0:
             Animal.alive.append(self)
 
-    def take_damage(self, amount: int) -> None | bool:
+    def take_damage(self, amount: int) -> bool:
         if self not in Animal.alive:
             return False
         self.health -= amount
