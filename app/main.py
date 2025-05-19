@@ -15,6 +15,7 @@ class Animal:
         self.health -= amount
         if self.health <= 0:
             Animal.alive.remove(self)
+        return True
 
     def __repr__(self) -> str:
         return (f"{{Name: {self.name}, Health: "
